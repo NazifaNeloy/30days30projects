@@ -25,6 +25,25 @@ body {
     align-items: center;
 }
 
+.nav-arrow {
+    background: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.nav-arrow:hover {
+    background: #fdfdfd;
+    color: #333;
+    transform: scale(1.1);
+}
+
 
 #monthIndicator {
     font-weight: 600;

@@ -13,6 +13,7 @@ const months = [
     { name: "November", color: "#D3F9D8" }, { name: "December", color: "#FFDEEB" }
 ];
 
+
 nextBtn.addEventListener('click', () => {
     if (currentIndex < 11) {
         currentIndex++;
