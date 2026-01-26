@@ -74,3 +74,14 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
+
+scrollContainer.addEventListener('scroll', () => {
+    const width = scrollContainer.offsetWidth;
+    const index = Math.round(scrollContainer.scrollLeft / width);
+    if (index !== currentIndex) {
+        currentIndex = index;
+        monthIndicator.innerText = months[currentIndex].name;
+    }
+});
+
+init();
