@@ -14,6 +14,46 @@ const months = [
 ];
 
 
+let currentIndex = 0;
+
+function init() {
+    months.forEach((m, index) => {
+        const card = document.createElement('div');
+        card.className = 'month-card';
+        card.style.backgroundColor = m.color;
+
+        card.innerHTML = `
+            <span class="year-label">${year}</span>
+            <div class="month-name">${m.name}</div>
+            <div class="calendar-grid">
+                <div class="day-label">S</div><div class="day-label">M</div>
+                <div class="day-label">T</div><div class="day-label">W</div>
+                <div class="day-label">T</div><div class="day-label">F</div>
+                <div class="day-label">S</div>
+                ${generateDays(index)}
+            </div>
+        `;
+        scrollContainer.appendChild(card);
+    });
+}
+
+function generateDays(monthIdx) {
+    let html = "";
+    const firstDay = new Date(year, monthIdx, 1).getDay();
+    const totalDays = new Date(year, monthIdx + 1, 0).getDate();
+
+    for (let i = 0; i < firstDay; i++) {
+        html += `<div></div>`;
+    }
+
+    for (let d = 1; d <= totalDays; d++) {
+        html += `<div class="day-num">${d}</div>`;
+    }
+    return html;
+}
+
+
+
 nextBtn.addEventListener('click', () => {
     if (currentIndex < 11) {
         currentIndex++;
@@ -33,3 +73,4 @@ prevBtn.addEventListener('click', () => {
         });
     }
 });
+
