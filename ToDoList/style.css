@@ -1,0 +1,205 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #ffeef2;
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.planner-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.planner-card {
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(255, 177, 193, 0.4);
+    position: relative;
+    border: 1px solid #ffb1c1;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 20px,
+        #fff0f3 20px,
+        #fff0f3 40px
+    );
+    background-size: 100% 30%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: #a32a44;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.date-row {
+    color: #a32a44;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.date-row input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 200px;
+}
+
+
+.header-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #a32a44;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.icon { 
+    font-size: 1.6rem; 
+}
+
+/* Box  */
+.section {
+    background: white;
+    border: 2px solid #ffb1c1;
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Inputs & Textareas */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+.todo-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #fce4ec;
+    background: #fffafa;
+}
+
+#add-btn {
+    background: #ffb1c1;
+    color: white;
+    border: none;
+    width: 45px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#add-btn:hover { 
+    background: #a32a44; 
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #fff0f3;
+    transition: 0.3s;
+}
+
+
+.check-circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ffb1c1;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.completed .check-circle {
+    background: #ffb1c1;
+}
+
+.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+@media (min-width: 768px) {
+    .content-grid {
+        flex-direction: row;
+    }
+    
+    .todo-box { 
+        flex: 1.3; 
+    }
+
+    .right-col { 
+        flex: 1; 
+    }
+
+    .priorities-box { 
+        min-height: 200px; 
+    }
+
+    .notes-box { 
+        min-height: 150px; 
+    }
+}

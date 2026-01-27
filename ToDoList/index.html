@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coquette Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="planner-container">
+        <div class="planner-card">
+            
+            <header class="main-header">
+                <h1>TO DO LIST</h1>
+                <div class="date-row">
+                    <label>Date:</label>
+                    <input type="text" placeholder="..........................................">
+                </div>
+            </header>
+
+            
+            <div class="content-grid">
+                <!-- LEFT COLUMN: TO DO -->
+                <section class="section todo-box">
+                    <div class="header-group">
+                        <span class="icon">🎀</span>
+                        <h2>To Do</h2>
+                    </div>
+                    
+                    <div class="todo-input-row">
+                        <input type="text" id="todo-input" placeholder="Add a task...">
+                        <button id="add-btn">+</button>
+                    </div>
+
+                    <ul id="todo-list">
+                  
+                    </ul>
+                </section>
+
+                <!-- RIGHT COLUMN -->
+                <div class="right-col">
+                    <section class="section goals-box">
+                        <div class="header-group">
+                            <span class="icon">✨</span>
+                            <h2>Goals</h2>
+                        </div>
+                        <textarea placeholder="My main focus today..."></textarea>
+                    </section>
+
+                    <section class="section priorities-box">
+                        <div class="header-group">
+                            <span class="icon">🍒</span>
+                            <h2>Top Priorities</h2>
+                        </div>
+                        <textarea placeholder="1. &#10;2. &#10;3."></textarea>
+                    </section>
+                </div>
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="section notes-box">
+                <div class="header-group">
+                    <span class="icon">🍰</span>
+                    <h2>Notes</h2>
+                </div>
+                <textarea placeholder="Write some notes here..."></textarea>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
