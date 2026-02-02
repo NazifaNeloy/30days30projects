@@ -63,10 +63,7 @@
             width: 100vw;
             overflow: hidden;
             position: relative;
-            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
-
         .scroll-track {
             display: flex;
             width: max-content; 
@@ -105,8 +102,6 @@
                 transform: translateX(0);
             }
             100% {
-                /* Move by exactly half the width of the track 
-                   (since we duplicated the cards) */
                 transform: translateX(calc(-50% - (var(--gap) / 2)));
             }
         }
