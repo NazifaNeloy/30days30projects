@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVibe Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Indie+Flower&display=swap" rel="stylesheet">
+ <link rel ="stylesheet" href="styles.css">
+
+    <div class="sidebar-left">
+        <div class="nav-btn active" onclick="location.reload()">🏠</div>
+        <div class="nav-btn">🤍</div>
+    </div>
+
+
+    <div class="main-content">
+        <div class="header">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search title, author, or vibe...">
+            </div>
+        </div>
+
+        <div class="categories">
+            <div class="cat-pill active" onclick="filterByTag('All')">All Books</div>
+            <div class="cat-pill" onclick="filterByTag('Romance')">Romance</div>
+            <div class="cat-pill" onclick="filterByTag('Thriller')">Thriller</div>
+        </div>
+
+        <h2 style="margin-bottom: 25px;">Library</h2>
+        <div class="book-grid" id="bookGrid"></div>
+    </div>
+
+    <div class="sidebar-right">
+        <h3 style="margin-bottom: 20px;">Book Details</h3>
+
+    
+        <div class="inside-look-container" id="insideContainer">
+            <span class="inside-badge">Inside Look ✨</span>
+            <img src="" id="innerImageDisplay" class="inside-image">
+        </div>
+
+        <div class="details-box">
+            <h2 id="detailTitle" style="margin-bottom: 5px; font-size: 1.2rem;">Select a book...</h2>
+            <div id="detailTags" style="margin-bottom: 15px;"></div>
+            <p id="detailDesc" class="book-desc">Click on any book cover to see the description and your annotated notes here!</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
