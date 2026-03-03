@@ -9,31 +9,20 @@ const library = [
         tags: ["Mystery", "Dual Timelines", "Thriller"], 
         genre: "Thriller",
         description: "In a rural town, three girls drive into the woods. Only one returns. Twenty years later, a journalist tries to uncover the truth."
-    },
-    { 
+    }, { 
         id: 2, 
-        title: "Story of My Life", 
-        author: "Lucy Score", 
-        link: "https://www.barnesandnoble.com/w/story-of-my-life-lucy-score/1143431343",
-        image: "./books/storyofmylife.jpg",
+        title: "The Love Hypothesis", 
+        author: "Ali Hazelwood", 
+        link: "https://www.penguinrandomhouse.com/books/673978/the-love-hypothesis-by-ali-hazelwood/",
+        image: "./books/thelovehypothesis.jpg",
         innerImage: "",
-        tags: ["Small Town", "Second Chance", "Romance"], 
+        tags: ["Fake Dating", "STEM", "Romance"], 
         genre: "Romance",
-        description: "A small-town romance where old flames reconnect and must face their past."
+        description: "A fake dating experiment between a PhD student and a professor."
     },
+    
     { 
         id: 3, 
-        title: "Icebreaker", 
-        author: "Hannah Grace", 
-        link: "https://www.simonandschuster.com/books/Icebreaker/Hannah-Grace/9781668026038",
-        image: "./books/icebreaker.jpg",
-        innerImage: "",
-        tags: ["Hockey", "Sports Romance", "Grumpy x Sunshine"], 
-        genre: "Sports",
-        description: "A figure skater and hockey captain are forced to share a rink, and sparks fly."
-    },
-    { 
-        id: 4, 
         title: "Things We Never Got Over", 
         author: "Lucy Score", 
         link: "https://www.barnesandnoble.com/w/things-we-never-got-over-lucy-score/1139747850",
@@ -44,7 +33,7 @@ const library = [
         description: "A runaway bride ends up in a small town with a grumpy barber."
     },
     { 
-        id: 5, 
+        id: 4, 
         title: "I Knew You Were Trouble", 
         author: "Alicia Garnier", 
         link: "https://www.goodreads.com/",
@@ -55,7 +44,7 @@ const library = [
         description: "A dramatic romance filled with tension and attraction."
     },
     { 
-        id: 6, 
+        id: 5, 
         title: "The Love Hypothesis", 
         author: "Ali Hazelwood", 
         link: "https://www.penguinrandomhouse.com/books/673978/the-love-hypothesis-by-ali-hazelwood/",
@@ -66,7 +55,29 @@ const library = [
         description: "A fake dating experiment between a PhD student and a professor."
     },
     { 
+        id: 6, 
+        title: "Story of My Life", 
+        author: "Lucy Score", 
+        link: "https://www.barnesandnoble.com/w/story-of-my-life-lucy-score/1143431343",
+        image: "./books/storyofmylife.jpg",
+        innerImage: "",
+        tags: ["Small Town", "Second Chance", "Romance"], 
+        genre: "Romance",
+        description: "A small-town romance where old flames reconnect and must face their past."
+    },
+    { 
         id: 7, 
+        title: "Icebreaker", 
+        author: "Hannah Grace", 
+        link: "https://www.simonandschuster.com/books/Icebreaker/Hannah-Grace/9781668026038",
+        image: "./books/icebreaker.jpg",
+        innerImage: "",
+        tags: ["Hockey", "Sports Romance", "Grumpy x Sunshine"], 
+        genre: "Sports",
+        description: "A figure skater and hockey captain are forced to share a rink, and sparks fly."
+    },
+    { 
+        id: 8, 
         title: "Love on the Brain", 
         author: "Ali Hazelwood", 
         link: "https://www.penguinrandomhouse.com/books/679583/love-on-the-brain-by-ali-hazelwood/",
@@ -79,9 +90,7 @@ const library = [
 ];const grid = document.getElementById('bookGrid');
 const searchInput = document.getElementById('searchInput');
 
-// ===============================
-// 3️⃣ RENDER BOOKS
-// ===============================
+
 function renderBooks(data) {
     grid.innerHTML = "";
 
@@ -108,14 +117,10 @@ function renderBooks(data) {
     });
 }
 
-// ===============================
-// 4️⃣ SHOW DETAILS MODAL
-// ===============================
 function showDetails(book) {
     document.getElementById('detailTitle').innerText = book.title;
     document.getElementById('detailDesc').innerText = book.description;
 
-    // Tags
     const tagBox = document.getElementById('detailTags');
     tagBox.innerHTML = "";
     book.tags.forEach(tag => {
@@ -124,7 +129,6 @@ function showDetails(book) {
             `<span class="handwritten-tag" style="transform: rotate(${rotation}deg)">#${tag}</span>`;
     });
 
-    // Link button
     const linkBtn = document.getElementById('detailLink');
     linkBtn.href = book.link;
     linkBtn.style.display = "inline-block";
